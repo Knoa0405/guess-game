@@ -3,8 +3,17 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/styles/styles.css")
         title Guess what?
     body
-        h1 Hello
+        .loginBox
+            form#jsLogin
+                input(placeholder="whats your nickname", type="text")
+
+        .gameContainer#jsGame
+            h1 You are logged in
+            div#jsNotifications
+        script.
+            window.events = !{JSON.stringify(events)}
         script(src="/socket.io/socket.io.js")
-        script(src="/index.js")
+        script(src="/js/main.js")
